@@ -1,0 +1,1 @@
+you can copy the template document to create new agent immediately.

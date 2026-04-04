@@ -1,0 +1,69 @@
+{
+  "framework": "IAF",
+  "version": "1.0",
+  "generated_at": "2026-04-02T02:33:30Z",
+  "structure": {
+    "agents_dir": "agents/",
+    "template_dir": "template/",
+    "dispatch_dir": "dispatch/",
+    "tube_dir": "tube/",
+    "global_config": "config.json",
+    "tube_config": "tube/tubes.json",
+    "tube_log": "tube/tube_log.jsonl",
+    "pages_dir": "pages/"
+  },
+  "agents": {},
+  "dispatches": {
+    "roundtable": {
+      "config": "dispatch/roundtable/dispatch_config.json",
+      "agents": [
+        "charlie",
+        "mcmillan"
+      ],
+      "ui": "dispatch/roundtable/roundtable.html"
+    }
+  },
+  "tubes": {
+    "morning_news": {
+      "enabled": true,
+      "triggers": [
+        "cron",
+        "manual"
+      ],
+      "steps": [
+        {
+          "type": "agent",
+          "id": "charlie"
+        }
+      ]
+    },
+    "doc_analysis_pipeline": {
+      "enabled": false,
+      "triggers": [
+        "manual"
+      ],
+      "steps": [
+        {
+          "type": "agent",
+          "id": "charlie"
+        },
+        {
+          "type": "dispatch",
+          "id": "roundtable"
+        }
+      ]
+    }
+  },
+  "conventions": {
+    "tool_file_pattern": "*_tools.py",
+    "tool_export_variable": "TOOLS",
+    "context_strategy_dir": "context/",
+    "skill_dir": "skills/",
+    "template_tools": [
+      "dispatch_tools.py",
+      "file_tools.py",
+      "shell_tools.py",
+      "tube_tools.py"
+    ]
+  }
+}
