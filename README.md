@@ -1,4 +1,4 @@
-# Intelligenism Agent Framework — AI Operability Edition
+# Intelligenism Agent Framework AI-Piloted Edition v1.0
 
 **Architecture Overview & Technical Guide**
 
@@ -12,7 +12,7 @@ Intelligenism Commercial Development LLC
 
 ## 1. Executive Summary
 
-Intelligenism Agent Framework (IAF) AI Operability Edition is a multi-agent orchestration framework purpose-built for one radical capability: to be fully understood, modified, and managed by external AI systems. While other agent frameworks are designed for human developers to write code, IAF is designed so that AI agents can operate it through file system manipulation alone.
+Intelligenism Agent Framework AI-Piloted Edition v1.0 is a multi-agent orchestration framework purpose-built for one radical capability: to be fully understood, modified, and managed by external AI systems. While other agent frameworks are designed for human developers to write code, IAF is designed so that AI agents can operate it through file system manipulation alone.
 
 This edition builds on the original IAF architecture, adding a comprehensive self-description layer, validation toolchain, structured logging, and operational safety mechanisms. The result is a framework that any flagship LLM with file read/write and shell access can take over, configure, and run autonomously.
 
